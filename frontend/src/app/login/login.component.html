@@ -1,0 +1,15 @@
+<div class="row" id="center">
+    <div class="col-md-6">
+        <form [formGroup]="form">
+            <h1 class="h3 mb-3 fw-normal">Painel de Acesso</h1>
+            <label class="visually-hidden">Login</label>
+            <input type="email" formControlName="login" class="form-control"  required=""
+                autofocus="">
+            <label class="visually-hidden">Senha</label>
+            <input type="password" formControlName="password" class="form-control" required="">
+            <br>
+            <button class="w-100 btn btn-lg btn-primary" (click)="login()" type="submit">Sign in</button>
+
+        </form>
+    </div>
+</div>

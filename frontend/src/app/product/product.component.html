@@ -1,0 +1,39 @@
+
+  <fieldset>
+    <legend><i class="fa fa-edit"></i> Cadastro de Produtos</legend>
+    <div id="inner">
+      <form>
+        <input name="id" [(ngModel)]="product.id" type="hidden" />
+        <div class="row mb-6">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" name="name" [(ngModel)]="product.name" class="form-control" required/>
+              <label class="form-label" for="form3Example1">Nome</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" currencyMask class="form-control" [(ngModel)]="product.salePrice" name="salePrice"
+                placeholder="0.00" required>
+              <label class="form-label" for="form3Example2">Valor</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-outline mb-4">
+          <input type="file" name="image" class="form-control" [(ngModel)]="product.image" placeholder="Image"
+            (change)="onSelectFile($event)">
+          <label class="form-label" for="form3Example3">Arquivo anexo</label>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <button type="button" routerLink="/home" class="btn btn-secondary">Voltar</button>
+          </div>
+
+          <div class="col-md-2">
+            <button type="button" (click)="create(product)" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </fieldset>

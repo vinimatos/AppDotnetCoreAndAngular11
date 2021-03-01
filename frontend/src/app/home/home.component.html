@@ -1,0 +1,51 @@
+<main class="container" id="center">
+    <div class="text-center">
+        <h3><strong>SISTEMA DE CADASTRO DE PRODUTOS</strong></h3>
+    </div>
+    <div class="card">
+        <div class="card-header ">
+            <div class="row">
+                <div class="col-md-11">
+                    <button class="btn btn-primary btn-sm" routerLink="/product">
+                        Novo
+                    </button>
+                </div>
+                <a href=""><i class="fas fa-sign-out-alt" id="logoutId" title="Sair"></i></a>
+            </div>
+
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Valor</th>
+                <th class="text-center">Arquivo</th>
+                <th colspan="1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of product">
+                <td class="text-center">{{item.name}}</td>
+                <td class="text-center">{{item.salePrice}}</td>
+                <td class="text-center"><a target="_blank" href="{{item.image}}">File</a></td>
+                <td class="text-center">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <button title="Editar" class="btn btn-sm btn-primary" routerLink="/product/{{item.id}}"
+                                style="margin-left: 2x;;" type="button">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" title="Excluir" class="btn-sm btn btn-danger"
+                                (click)="delete(item.id)">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
