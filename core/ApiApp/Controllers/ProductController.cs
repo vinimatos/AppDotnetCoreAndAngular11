@@ -24,7 +24,7 @@ namespace ApiApp.Controllers
         [HttpGet]
         [Route("List")]
         //c async Task<ActionResult<IEnumerable<Product>>>
-        public async Task<ActionResult<IEnumerable<Product>>> ListAsync()
+        public async Task<IActionResult<IEnumerable<Product>>> ListAsync()
         {
             return await _productService.ListAsync();
         }
@@ -43,7 +43,7 @@ namespace ApiApp.Controllers
 
         [HttpGet]
         [Route("GetById/{id}")]
-        public ActionResult GetById(long id)
+        public IActionResult GetById(long id)
         {
             var result = _productService.GetById(id);
 
@@ -63,7 +63,7 @@ namespace ApiApp.Controllers
 
         [HttpGet]
         [Route("Delete/{id}")]
-        public ActionResult Delete(long id)
+        public IActionResult Delete(long id)
         {
             var result = _productService.Delete(id);
 
