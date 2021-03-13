@@ -1,7 +1,7 @@
 ## Para executar a aplicação frontend
 ng serve  `http://localhost:4200/`.
 
-## Para executa a api
+## Para executar a API
 - dotnet run
 
 
