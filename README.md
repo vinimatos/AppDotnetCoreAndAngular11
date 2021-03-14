@@ -12,7 +12,7 @@ ng serve  `http://localhost:4200/`.
 
 ## Informações adicionais
 
-- Para executar a aplicação em modo debug, atualize a url de acess a AoPI. Localizado no projeto:  Frontend/scr/app/product/Service/product.service.ts 
+- Para executar a aplicação em modo debug, atualize a url de acesso a API. Localizado no projeto:  Frontend/scr/app/product/Service/product.service.ts 
 
 
 ## Observação
